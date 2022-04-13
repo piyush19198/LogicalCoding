@@ -1,3 +1,6 @@
 public class IterateHashMapUsingWhileAndFor {
-    psvm
+    
+    public static void main(String[] args) {
+    
+    }
 }
