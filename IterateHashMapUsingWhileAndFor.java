@@ -18,7 +18,7 @@ public class IterateHashMapUsingWhileAndFor {
 
         hashMap.forEach((key, value) -> System.out.println(key + " = " + value));
         
-        Iterator<Entry<String, Integer>> itr = hashMap.entrySet().iterator();
+        Iterator< Entry<String, Integer> > itr = hashMap.entrySet().iterator();
         while (itr.hasNext()) {
             Map.Entry<String,Integer> itrHM = (Map.Entry<String,Integer>)
             itr.next();
