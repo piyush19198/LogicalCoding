@@ -7,7 +7,7 @@ public class Fibonacci {
     static int printTerm = 0;
     public static void fibonacciNonRecursion(int n) {
         System.out.println("Without recursion Fibonacci series upto " + n + " terms: ");
-        for (int i = 1; i <= n; ++i) {
+        for (int i = 1; i <= n; i++) {
             System.out.print(firstTerm + ", ");
             int nextTerm = firstTerm + secondTerm;
             firstTerm = secondTerm;
@@ -24,7 +24,7 @@ public class Fibonacci {
             fibonacciRecursion(n - 1);
         }      
     }
-
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter n(upto which you want fibonacci series to be printed)");

@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class IterateHashMapUsingWhileAndFor {
-    
+
     public static void main(String[] args) {
         Map<String, Integer> hashMap = new HashMap<String, Integer>();
         hashMap.put("Piyush", 1);
