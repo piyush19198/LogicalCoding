@@ -2,20 +2,20 @@ import java.io.*;
 import java.util.Scanner;
 
 public class CaesarCipher {
-    public static String simpleCipher(String encrypted, int k) {
+    public static String simpleCipher(String normalText, int k) {
 
         StringBuilder cipherText = new StringBuilder();
-        for(int i = 0; i< encrypted.length();i++){
+        for(int i = 0; i< normalText.length();i++){
             if(k>=0){
-                if(Character.isUpperCase(encrypted.charAt(i))){
-                    int rotate = encrypted.charAt(i) - 'A' - k;
+                if(Character.isUpperCase(normalText.charAt(i))){
+                    int rotate = normalText.charAt(i) - 'A' - k;
                     if (rotate < 0) {
                         rotate = rotate + 26;
                     }
                     cipherText.append((char)('A'+( rotate % 26)) );
                 }
                 else{
-                    cipherText.append(encrypted.charAt(i));
+                    cipherText.append(normalText.charAt(i));
                 }
             }
         }
@@ -24,8 +24,8 @@ public class CaesarCipher {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
-        String encrypted = sc.nextLine();
+        String normalText = sc.nextLine();
         int k = sc.nextInt();
-        System.out.println(simpleCipher(encrypted, k));
+        System.out.println(simpleCipher(normalText, k));
     }
 }
