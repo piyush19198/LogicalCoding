@@ -1,6 +1,6 @@
 public class SecondHighInArray {
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 4, 5, 19, 17, 8, 9, 12 };
+        int arr[] = { 1, 2, 3, 4, 5, 19, 17, 8, 9, 18 };
         int highest = 0;
         int secondHighest = 0;
         for (int i = 0; i < arr.length; i++) {
