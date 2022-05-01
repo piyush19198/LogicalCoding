@@ -18,7 +18,7 @@ public class SCLL {
             this.next = null;
         }
     }
-    
+
     protected boolean isEmpty() {
         return (head == null);
     }
@@ -168,74 +168,75 @@ public class SCLL {
 		System.out.println("---Welcome to Singly Linked List---");
 		
 		boolean loop = true;
-		while(loop) {
-			list.display();
-			System.out.println("\nSelect operation to perform: "
-					+ "\n1.Display list"
-					+ "\n2.Insert node at last position"
-					+ "\n3.Insert node at first position"
-					+ "\n4.Insert node at specific location"
-					+ "\n5.Delete node at last position"
-					+ "\n6.Delete node at first position"
-					+ "\n7.Delete node at specific location"
-					+ "\n8.Reverse the list and display"
-					+ "\n9.Display list in reverse manner"
-					+ "\n10.Exit");	
-			int choice = sc.nextInt();
-			
-			switch (choice) {
-			case 1:
-				list.display();
-				break;
-			case 2:
-				list.insertAtEnd(sc.nextInt());
-				break;
-			case 3:
-				list.insertAtHead(sc.nextInt());
-				break;
-			case 4:
-				System.out.println("Enter position to enter data at");
-				int posToAdd = sc.nextInt();
-				System.out.println("Enter data to insert at position "+posToAdd);
-				int dataToAdd = sc.nextInt();
-				list.insertAt(posToAdd, dataToAdd);
-				break;
-			case 5:
-				list.deleteAtEnd();
-				System.out.println("Last node deleted, Updated List is = \n");
-				list.display();
-				break;
-			case 6:
-				list.deleteAtHead();
-				System.out.println("Last node deleted, Updated List is = \n");
-				list.display();
-				break;
-			case 7:
-				System.out.println("Enter position to delete data from");
-				int posToDelete = sc.nextInt();
-				list.delete(posToDelete);
-				System.out.println("Last node deleted, Updated List is = \n");
-				list.display();
-				break;
-			case 8:
-				System.out.println("List before reverse operation: \n");
-				list.display();
-				if(!list.isEmpty()) {
-					list.reverse();
-				}
-				System.out.println("List after reverse operation: \n");
-				list.display();
-				break;
-			case 9:
-				list.displayReverse();
-				break;
-			case 10:
-				loop = false;
-				break;
-			default:
-				System.out.println("!!! PLEASE ENTER VALID OPERATION !!!");
-				break;
-			}
-		}
+        while (loop) {
+            list.display();
+            System.out.println("\nSelect operation to perform: "
+                    + "\n1.Display list"
+                    + "\n2.Insert node at last position"
+                    + "\n3.Insert node at first position"
+                    + "\n4.Insert node at specific location"
+                    + "\n5.Delete node at last position"
+                    + "\n6.Delete node at first position"
+                    + "\n7.Delete node at specific location"
+                    + "\n8.Reverse the list and display"
+                    + "\n9.Display list in reverse manner"
+                    + "\n10.Exit");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    list.display();
+                    break;
+                case 2:
+                    list.insertAtEnd(sc.nextInt());
+                    break;
+                case 3:
+                    list.insertAtHead(sc.nextInt());
+                    break;
+                case 4:
+                    System.out.println("Enter position to enter data at");
+                    int posToAdd = sc.nextInt();
+                    System.out.println("Enter data to insert at position " + posToAdd);
+                    int dataToAdd = sc.nextInt();
+                    list.insertAt(posToAdd, dataToAdd);
+                    break;
+                case 5:
+                    list.deleteAtEnd();
+                    System.out.println("Last node deleted, Updated List is = \n");
+                    list.display();
+                    break;
+                case 6:
+                    list.deleteAtHead();
+                    System.out.println("Last node deleted, Updated List is = \n");
+                    list.display();
+                    break;
+                case 7:
+                    System.out.println("Enter position to delete data from");
+                    int posToDelete = sc.nextInt();
+                    list.delete(posToDelete);
+                    System.out.println("Last node deleted, Updated List is = \n");
+                    list.display();
+                    break;
+                case 8:
+                    System.out.println("List before reverse operation: \n");
+                    list.display();
+                    if (!list.isEmpty()) {
+                        list.reverse();
+                    }
+                    System.out.println("List after reverse operation: \n");
+                    list.display();
+                    break;
+                case 9:
+                    list.displayReverse();
+                    break;
+                case 10:
+                    loop = false;
+                    break;
+                default:
+                    System.out.println("!!! PLEASE ENTER VALID OPERATION !!!");
+                    break;
+            }
+        }
+        sc.close();
 	}
 }
